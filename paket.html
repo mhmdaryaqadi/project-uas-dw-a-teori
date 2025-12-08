@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAdventure - Jelajah Puncak</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">
+                <i class="fa-solid fa-mountain-sun"></i> MyAdventure
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="paket.html">Jadwal Trip</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2 class="text-center fw-bold mb-4">Katalog Pendakian Lengkap</h2>
+        <p class="text-center text-muted mb-5">Pilihan destinasi pendakian terlengkap dari Sabang sampai Merauke.</p>
+
+        <div class="d-flex justify-content-center mb-5">
+            <div class="btn-group shadow-sm" role="group">
+                <button type="button" class="btn btn-outline-dark active" onclick="filterGunung('all', this)">Semua</button>
+                <button type="button" class="btn btn-outline-dark" onclick="filterGunung('jawa', this)">Pulau Jawa</button>
+                <button type="button" class="btn btn-outline-dark" onclick="filterGunung('bali-nusa', this)">Bali & Nusa</button>
+
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lainnya
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#" onclick="filterGunung('sumatera', this)">Sumatera</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterGunung('sulawesi', this)">Sulawesi</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterGunung('kalimantan', this)">Kalimantan</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterGunung('maluku', this)">Maluku</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterGunung('papua', this)">Papua</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://tribratanews.polri.go.id/web/image/blog.post/76677/image" class="card-img-top" alt="Semeru">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Hard</span> <span class="badge bg-secondary mb-2">Jawa Timur</span>
+                        <h5 class="card-title fw-bold">Gunung Semeru (3.676 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Atap Pulau Jawa • 4H 3M</p>
+                        <h5 class="text-warning fw-bold">Rp 2.800.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Semeru', '2.8 Juta')">Waiting List</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://radarcirebon.disway.id/upload/2468cb945dccf6586c79d0aca0665881.jpg" class="card-img-top" alt="Ciremai">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Hard</span> <span class="badge bg-secondary mb-2">Jawa Barat</span>
+                        <h5 class="card-title fw-bold">Gunung Ciremai (3.078 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Atap Jawa Barat • 2H 1M</p>
+                        <h5 class="text-warning fw-bold">Rp 550.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Ciremai', '550 Ribu')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://lh4.googleusercontent.com/proxy/gsZaAiIkzTlWzAHGnuOMts3Wo-h_3XNhwBC104n8i5OMw_hh9FyZseYPvtt9MDiBzwkARlkmVSvjjifvdpBAepWhJtRLqaW6EvXg9L-Wo6U" class="card-img-top" alt="Gede">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Medium</span> <span class="badge bg-secondary mb-2">Jawa Barat</span>
+                        <h5 class="card-title fw-bold">Gunung Gede (2.958 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Alun-alun Surya Kencana • 2H 1M</p>
+                        <h5 class="text-warning fw-bold">Rp 450.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Gunung Gede', '450 Ribu')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://img.inews.co.id/media/1200/files/inews_new/2023/05/05/fakta_gunung_gede_pangrango.jpg" class="card-img-top" alt="Pangrango">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Medium Hard</span> <span class="badge bg-secondary mb-2">Jawa Barat</span>
+                        <h5 class="card-title fw-bold">Gn. Pangrango (3.019 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Lembah Mandalawangi • 2H 1M</p>
+                        <h5 class="text-warning fw-bold">Rp 500.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Pangrango', '500 Ribu')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://imgsrv2.voi.id/P9yZiurvbvBXj-CkQ1ia9TLAodi4CwYtVVQ0CwcXsWI/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy80NTk3NzAvMjAyNTAyMTMxNDE4LW1haW4uanBn.jpg" class="card-img-top" alt="Slamet">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Hard</span> <span class="badge bg-secondary mb-2">Jawa Tengah</span>
+                        <h5 class="card-title fw-bold">Gunung Slamet (3.428 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Atap Jawa Tengah • 3H 2M</p>
+                        <h5 class="text-warning fw-bold">Rp 800.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Slamet', '800 Ribu')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://backpackerjakarta.com/wp-content/uploads/2018/02/gunung-arjuno-di-malang.jpg" class="card-img-top" alt="Arjuno">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Hard</span> <span class="badge bg-secondary mb-2">Jawa Timur</span>
+                        <h5 class="card-title fw-bold">Arjuno Welirang (3.339 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Lintas Dua Puncak • 4H 3M</p>
+                        <h5 class="text-warning fw-bold">Rp 1.200.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Arjuno', '1.2 Juta')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://bondowosoku.bondowosokab.go.id/admin/imgpost/1732.jpg" class="card-img-top" alt="Raung">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">Extreme</span> <span class="badge bg-secondary mb-2">Jawa Timur</span>
+                        <h5 class="card-title fw-bold">Gunung Raung (3.332 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Jalur Kalibaru • 4H 3M</p>
+                        <h5 class="text-warning fw-bold">Rp 1.800.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Raung', '1.8 Juta')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://mounture.com/wp-content/uploads/2022/12/Merbabu-JPG.jpg" class="card-img-top" alt="Merbabu">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Medium</span> <span class="badge bg-secondary mb-2">Jawa Tengah</span>
+                        <h5 class="card-title fw-bold">Gunung Merbabu (3.145 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Savana Indah • 2H 1M</p>
+                        <h5 class="text-warning fw-bold">Rp 750.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Merbabu', '750 Ribu')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://asset.kompas.com/crops/MigeYagOiMtO7fzstsqvpKnm_FQ=/69x85:693x501/1200x800/data/photo/2019/06/21/3507694318.jpg" class="card-img-top" alt="Lawu">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Medium</span> <span class="badge bg-secondary mb-2">Jatim/Jateng</span>
+                        <h5 class="card-title fw-bold">Gunung Lawu (3.265 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Warung Mbok Yem • 2H 1M</p>
+                        <h5 class="text-warning fw-bold">Rp 600.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Lawu', '600 Ribu')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 card-gunung" data-lokasi="jawa">
+                <div class="card h-100 shadow border-0 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=600" class="card-img-top" alt="Sindoro">
+                    <div class="card-body">
+                        <span class="badge bg-warning text-dark mb-2">Medium</span> <span class="badge bg-secondary mb-2">Jawa Tengah</span>
+                        <h5 class="card-title fw-bold">Gunung Sindoro (3.153 mdpl)</h5>
+                        <p class="text-muted small"><i class="fa-regular fa-calendar"></i> Lautan Awan • 2H 1M</p>
+                        <h5 class="text-warning fw-bold">Rp 550.000</h5>
+                        <button class="btn btn-dark w-100 mt-3" onclick="daftarWA('Trip Sindoro', '550 Ribu')">Booking Sekarang</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 MyAdventure. Explore Indonesia.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
