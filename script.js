@@ -1,5 +1,6 @@
-// update WhatsApp booking function
-console.log("Script MyAdventure Siap");
+console.log("Script MyAdventure Siap!");
+
+const video = document.getElementById('bg-video');
 
 function filter(kategori) {
     const items = document.querySelectorAll('.card'); 
@@ -24,9 +25,12 @@ function filter(kategori) {
     });
 }
 
+function pesanWA(nama, harga) {
+    kirimWA(nama, harga);
+}
+
 function filterGunung(kategori, tombol) {
     document.querySelectorAll('.btn-group > .btn').forEach(btn => btn.classList.remove('active'));
-    
     if (!tombol.classList.contains('dropdown-item')) {
         tombol.classList.add('active');
     }
@@ -44,6 +48,16 @@ function filterGunung(kategori, tombol) {
             item.classList.remove('fade-in');
         }
     });
+}
+
+function daftarWA(gunung, harga) {
+    kirimWA(gunung, harga);
+}
+
+function kirimWA(produk, harga) {
+    const nomorHP = "+628999254059"; 
+    const pesan = `Halo Admin MyAdventure, saya mau booking *${produk}* dengan harga *${harga}*. Masih ada slot?`;
+    window.open(`https://wa.me/${nomorHP}?text=${encodeURIComponent(pesan)}`, '_blank');
 }
 
 const btnTop = document.getElementById("btn-top");
