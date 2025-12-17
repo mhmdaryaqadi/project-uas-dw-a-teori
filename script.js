@@ -82,3 +82,35 @@ style.innerHTML = `
 .fade-in { animation: fadeIn 0.5s ease-in-out; }
 `;
 document.head.appendChild(style);
+
+function filterAlat(kategori, tombol) {
+    const buttons = tombol.parentElement.querySelectorAll('.btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    tombol.classList.add('active');
+
+    const items = document.querySelectorAll('.card-alat'); 
+    
+    items.forEach(item => {
+        const itemKat = item.getAttribute('data-kategori');
+        
+        if (kategori === 'all' || itemKat === kategori) {
+            item.style.display = 'block'; 
+            item.classList.add('fade-in');
+        } else {
+            item.style.display = 'none'; 
+            item.classList.remove('fade-in');
+        }
+    });
+}
+
+function sewaWA(namaAlat, harga) {
+    const nomorHP = "+628999254059"; 
+    const pesan = `Halo Admin MyAdventure, saya berencana menyewa *${namaAlat}* (${harga}/hari). Apakah tersedia untuk tanggal ... ?`;
+    window.open(`https://wa.me/${nomorHP}?text=${encodeURIComponent(pesan)}`, '_blank');
+}
+
+function sewaWA(namaAlat, harga) {
+    const nomorHP = "+628999254059"; 
+    const pesan = `Halo Admin MyAdventure, saya berencana menyewa *${namaAlat}* (${harga}/hari). Apakah tersedia untuk tanggal ... ?`;
+    window.open(`https://wa.me/${nomorHP}?text=${encodeURIComponent(pesan)}`, '_blank');
+}
