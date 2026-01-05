@@ -30,15 +30,18 @@
     </nav>
 
     <div class="hero-section position-relative overflow-hidden text-center text-white d-flex align-items-center justify-content-center" style="height: 100vh;">
-        <video id="bg-video" autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; top: 0; left: 0; z-index: -2;">
+        <video id="bg-video" autoplay muted loop playsinline>
             <source src="img/gunung.mp4" type="video/mp4">
         </video>
-        <div class="position-absolute w-100 h-100" style="background: rgba(0,0,0,0.5); z-index: -1;"></div>
+        <div class="overlay-gelap"></div>
         <div class="container position-relative" style="z-index: 1;">
             <h1 class="display-3 fw-bold mb-3">Taklukkan Atap Indonesia</h1>
             <p class="lead mb-4">Open Trip Pendakian Gunung dan Sewa Alat Pendakian.</p>
-            <a href="paket.html" class="btn btn-warning btn-lg fw-bold px-5">Open Trip</a>
-            <a href="sewa.html" class="btn btn-warning btn-lg fw-bold px-5">Sewa Alat</a>
+            
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+                <a href="paket.html" class="btn btn-warning btn-lg fw-bold px-5" style="width: fit-content;">Open Trip</a>
+                <a href="sewa.html" class="btn btn-warning btn-lg fw-bold px-5" style="width: fit-content;">Sewa Alat</a>
+            </div>
         </div>
     </div>
 
@@ -72,8 +75,6 @@
         </div>
     </section>
 
-    </section>
-
     <section class="container mb-5">
         <div class="p-5 text-center bg-white rounded-3 shadow-sm border">
             <h3 class="fw-bold mb-3">Penting Sebelum Mendaki dan Sewa Alat Pendakian</h3>
@@ -83,8 +84,7 @@
             </a>
         </div>
     </section>
-    <footer id="footer">
-   
+    
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p class="mb-0">&copy; 2025 MyAdventure. Explore Indonesia.</p>
