@@ -36,15 +36,24 @@
             <div class="garis-bawah mx-auto"></div>
         </div>
 
-        <div class="d-flex justify-content-center flex-wrap mb-5 gap-2">
-            <div class="btn-group shadow-sm" role="group">
+        <div class="d-flex justify-content-center mb-5">
+            <div class="btn-group shadow-sm" role="group" aria-label="Filter Alat">
+                
                 <button type="button" class="btn btn-outline-dark active" onclick="filterAlat('all', this)">Semua</button>
                 <button type="button" class="btn btn-outline-dark" onclick="filterAlat('tenda', this)">Tenda</button>
                 <button type="button" class="btn btn-outline-dark" onclick="filterAlat('carrier', this)">Tas/Carrier</button>
-                <button type="button" class="btn btn-outline-dark" onclick="filterAlat('tidur', this)">Alat Tidur</button>
-                <button type="button" class="btn btn-outline-dark" onclick="filterAlat('masak', this)">Alat Masak</button>
-                <button type="button" class="btn btn-outline-dark" onclick="filterAlat('lampu', this)">Penerangan</button>
-                <button type="button" class="btn btn-outline-dark" onclick="filterAlat('aksesoris', this)">Aksesoris</button>
+
+                <div class="btn-group" role="group">
+                    <button id="btnLainnya" type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lainnya
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" type="button" onclick="filterAlat('tidur', this)">Alat Tidur</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="filterAlat('masak', this)">Alat Masak</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="filterAlat('lampu', this)">Penerangan</button></li>
+                        <li><button class="dropdown-item" type="button" onclick="filterAlat('aksesoris', this)">Aksesoris</button></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -52,11 +61,11 @@
             
             <div class="col-md-3 col-6 card-alat" data-kategori="tenda">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://img.lazcdn.com/g/ff/kf/Sfd045f8c2af34fc9a11a702876de3f013.jpg_720x720q80.jpg" class="card-img-top" alt="Tenda 4P">
-                    <div class="card-body p-3">
+                    <img src="https://img.lazcdn.com/g/ff/kf/Sfd045f8c2af34fc9a11a702876de3f013.jpg_720x720q80.jpg" class="card-img-top" alt="Tenda 4P" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Tenda Great Outdoor (4P)</h6>
-                        <p class="small text-muted mb-1">Double Layer, Waterproof</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Double Layer, Waterproof</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 40rb</span>
                             <button onclick="sewaWA('Tenda GO Java 4', '40rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -66,11 +75,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tenda">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://img.lazcdn.com/g/ff/kf/Sdeda9c66d56e4fe6b59f20b0d7bba92aJ.jpg_960x960q80.jpg_.webp" class="card-img-top" alt="Tenda 2P">
-                    <div class="card-body p-3">
+                    <img src="https://img.lazcdn.com/g/ff/kf/Sdeda9c66d56e4fe6b59f20b0d7bba92aJ.jpg_960x960q80.jpg_.webp" class="card-img-top" alt="Tenda 2P" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Tenda Eiger Senaru (2P)</h6>
-                        <p class="small text-muted mb-1">Ringan, Kokoh, Premium</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Ringan, Kokoh, Premium</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 35rb</span>
                             <button onclick="sewaWA('Tenda Eiger 2P', '35rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -80,11 +89,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tenda">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://contents.mediadecathlon.com/p2850689/k$2b3d1b799e066611c7d7f441deebc1dc/tenda-camping-arpenaz-6-3-fresh-and-black-6-orang-3-ruangan-quechua-8881556.jpg?f=1920x0&format=auto" class="card-img-top" alt="Tenda 6P">
-                    <div class="card-body p-3">
+                    <img src="https://contents.mediadecathlon.com/p2850689/k$2b3d1b799e066611c7d7f441deebc1dc/tenda-camping-arpenaz-6-3-fresh-and-black-6-orang-3-ruangan-quechua-8881556.jpg?f=1920x0&format=auto" class="card-img-top" alt="Tenda 6P" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Tenda Arpenaz Family (6P)</h6>
-                        <p class="small text-muted mb-1">Luas, 3 Kamar Tidur</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Luas, 3 Kamar Tidur</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 80rb</span>
                             <button onclick="sewaWA('Tenda Keluarga 6P', '80rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -94,11 +103,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tenda">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://down-id.img.susercontent.com/file/f25d2676cd54eb3d26bbf6e2c3818ab0" class="card-img-top" alt="Flysheet">
-                    <div class="card-body p-3">
+                    <img src="https://down-id.img.susercontent.com/file/f25d2676cd54eb3d26bbf6e2c3818ab0" class="card-img-top" alt="Flysheet" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Flysheet 3x4 Meter</h6>
-                        <p class="small text-muted mb-1">Pelindung Hujan/Dapur</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Pelindung Hujan/Dapur</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 10rb</span>
                             <button onclick="sewaWA('Flysheet 3x4', '10rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -108,11 +117,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tenda">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://img.lazcdn.com/g/p/fbba7f9c9327c0b43e6e7f51241276ae.jpg_720x720q80.jpg" class="card-img-top" alt="Pasak">
-                    <div class="card-body p-3">
+                    <img src="https://img.lazcdn.com/g/p/fbba7f9c9327c0b43e6e7f51241276ae.jpg_720x720q80.jpg" class="card-img-top" alt="Pasak" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Pasak Baja (10pcs)</h6>
-                        <p class="small text-muted mb-1">Anti Bengkok</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Anti Bengkok</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Pasak Tambahan', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -122,11 +131,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="carrier">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://i.ytimg.com/vi/SpE_UghsEYY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDLNLT8LVQ1EU6glz1VNcTMxZrSOw" class="card-img-top" alt="Carrier 60L">
-                    <div class="card-body p-3">
+                    <img src="https://i.ytimg.com/vi/SpE_UghsEYY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDLNLT8LVQ1EU6glz1VNcTMxZrSOw" class="card-img-top" alt="Carrier 60L" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Carrier Eiger 60L</h6>
-                        <p class="small text-muted mb-1">Muat Banyak + Raincover</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Muat Banyak + Raincover</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 25rb</span>
                             <button onclick="sewaWA('Carrier Eiger 60L', '25rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -136,11 +145,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="carrier">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://d1yutv2xslo29o.cloudfront.net/product/photo/940000708_cd69.jpg" class="card-img-top" alt="Osprey">
-                    <div class="card-body p-3">
+                    <img src="https://d1yutv2xslo29o.cloudfront.net/product/photo/940000708_cd69.jpg" class="card-img-top" alt="Osprey" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Osprey Kestrel 48L</h6>
-                        <p class="small text-muted mb-1">Backsystem Nyaman</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Backsystem Nyaman</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 35rb</span>
                             <button onclick="sewaWA('Osprey Kestrel 48L', '35rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -150,11 +159,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="carrier">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://id-test-11.slatic.net/p/554677a7f9a055c5a0275bf1887159b7.jpg" class="card-img-top" alt="Carrier 80L">
-                    <div class="card-body p-3">
+                    <img src="https://id-test-11.slatic.net/p/554677a7f9a055c5a0275bf1887159b7.jpg" class="card-img-top" alt="Carrier 80L" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Carrier Deuter 80L</h6>
-                        <p class="small text-muted mb-1">Ekspedisi Besar</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Ekspedisi Besar</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 40rb</span>
                             <button onclick="sewaWA('Deuter 80L', '40rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -164,11 +173,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="carrier">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://down-id.img.susercontent.com/file/fea2cb3e28178c68a74af0d98283009a" class="card-img-top" alt="Daypack">
-                    <div class="card-body p-3">
+                    <img src="https://down-id.img.susercontent.com/file/fea2cb3e28178c68a74af0d98283009a" class="card-img-top" alt="Daypack" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Daypack Consina 25L</h6>
-                        <p class="small text-muted mb-1">Untuk Summit Attack</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Untuk Summit Attack</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 15rb</span>
                             <button onclick="sewaWA('Daypack 25L', '15rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -178,11 +187,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="carrier">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0dzLdwppD72EWkYwxwGDlOBBhm8R6WZVgAA&s" class="card-img-top" alt="Raincover">
-                    <div class="card-body p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0dzLdwppD72EWkYwxwGDlOBBhm8R6WZVgAA&s" class="card-img-top" alt="Raincover" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Rain Cover Bag</h6>
-                        <p class="small text-muted mb-1">All Size (Up to 80L)</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">All Size (Up to 80L)</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Rain Cover', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -192,11 +201,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="masak">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://antarestar.com/wp-content/uploads/2022/07/KOMPOR-WINDPROOF.png" class="card-img-top" alt="Kompor">
-                    <div class="card-body p-3">
+                    <img src="https://antarestar.com/wp-content/uploads/2022/07/KOMPOR-WINDPROOF.png" class="card-img-top" alt="Kompor" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Kompor Windproof</h6>
-                        <p class="small text-muted mb-1">Tahan Angin (Mawar)</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Tahan Angin (Mawar)</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 10rb</span>
                             <button onclick="sewaWA('Kompor Windproof', '10rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -206,11 +215,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="masak">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://down-id.img.susercontent.com/file/739c66e8c86b74a0dce86a3a8110b5ab" class="card-img-top" alt="Nesting">
-                    <div class="card-body p-3">
+                    <img src="https://down-id.img.susercontent.com/file/739c66e8c86b74a0dce86a3a8110b5ab" class="card-img-top" alt="Nesting" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Nesting DS-308</h6>
-                        <p class="small text-muted mb-1">Isi 3 Panci + Wajan + Teko</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Isi 3 Panci + Wajan + Teko</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 15rb</span>
                             <button onclick="sewaWA('Nesting DS308', '15rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -220,11 +229,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="masak">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://lengkapteknik.com/247-thickbox_default/gas-cartridge-hi-cook-gc-020.jpg" class="card-img-top" alt="Gas Hi-Cook">
-                    <div class="card-body p-3">
+                    <img src="https://lengkapteknik.com/247-thickbox_default/gas-cartridge-hi-cook-gc-020.jpg" class="card-img-top" alt="Gas Hi-Cook" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Gas Hi-Cook (Refill)</h6>
-                        <p class="small text-muted mb-1">Isi Full (Tukar Tabung)</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Isi Full (Tukar Tabung)</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 8rb</span>
                             <button onclick="sewaWA('Gas Kaleng', '8rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -234,11 +243,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="masak">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://upload.jaknot.com/2025/02/images/products/2a592e/original/nordic-set-alat-makan-sendok-garpu-sumpit-stainless-steel-cutlery-xs-b014.jpg" class="card-img-top" alt="Piring">
-                    <div class="card-body p-3">
+                    <img src="https://upload.jaknot.com/2025/02/images/products/2a592e/original/nordic-set-alat-makan-sendok-garpu-sumpit-stainless-steel-cutlery-xs-b014.jpg" class="card-img-top" alt="Piring" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Set Alat Makan</h6>
-                        <p class="small text-muted mb-1">Piring, Sendok Lipat</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Piring, Sendok Lipat</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Set Alat Makan', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -246,13 +255,13 @@
                 </div>
             </div>
 
-             <div class="col-md-3 col-6 card-alat" data-kategori="masak">
+            <div class="col-md-3 col-6 card-alat" data-kategori="masak">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://down-id.img.susercontent.com/file/id-11134201-23020-25776vs1b2nv6c" class="card-img-top" alt="Egg Holder">
-                    <div class="card-body p-3">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134201-23020-25776vs1b2nv6c" class="card-img-top" alt="Egg Holder" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Egg Holder (Isi 6)</h6>
-                        <p class="small text-muted mb-1">Pelindung Telur</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Pelindung Telur</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 3rb</span>
                             <button onclick="sewaWA('Egg Holder', '3rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -260,13 +269,13 @@
                 </div>
             </div>
 
-             <div class="col-md-3 col-6 card-alat" data-kategori="masak">
+            <div class="col-md-3 col-6 card-alat" data-kategori="masak">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://www.megah.co.id/cdn/shop/products/WhatsAppImage2023-03-15at15.59.04.jpg?v=1678938937" class="card-img-top" alt="Pisau">
-                    <div class="card-body p-3">
+                    <img src="https://www.megah.co.id/cdn/shop/products/WhatsAppImage2023-03-15at15.59.04.jpg?v=1678938937" class="card-img-top" alt="Pisau" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Pisau Lipat Outdoor</h6>
-                        <p class="small text-muted mb-1">Tajam & Multifungsi</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Tajam & Multifungsi</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Pisau Lipat', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -276,11 +285,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tidur">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQgQjPdH-xlT3kRQz7anHgil0KALgfJOpwvw&s" class="card-img-top" alt="SB Polar">
-                    <div class="card-body p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQgQjPdH-xlT3kRQz7anHgil0KALgfJOpwvw&s" class="card-img-top" alt="SB Polar" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Sleeping Bag Polar</h6>
-                        <p class="small text-muted mb-1">Hangat, Model Mummy</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Hangat, Model Mummy</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 15rb</span>
                             <button onclick="sewaWA('SB Polar', '15rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -290,11 +299,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tidur">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://img.lazcdn.com/g/p/06a6bfef9e84ae7096012d59d415aec5.png_720x720q80.png" class="card-img-top" alt="Matras">
-                    <div class="card-body p-3">
+                    <img src="https://img.lazcdn.com/g/p/06a6bfef9e84ae7096012d59d415aec5.png_720x720q80.png" class="card-img-top" alt="Matras" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Matras Spon Karet</h6>
-                        <p class="small text-muted mb-1">Anti Selip</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Anti Selip</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Matras Spon', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -304,11 +313,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tidur">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYB-zY27NR7PwobAdmHvKW7fVTmyC5NAM07Q&s" class="card-img-top" alt="Matras Angin">
-                    <div class="card-body p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYB-zY27NR7PwobAdmHvKW7fVTmyC5NAM07Q&s" class="card-img-top" alt="Matras Angin" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Matras Angin (Inflatable)</h6>
-                        <p class="small text-muted mb-1">Empuk, Include Pompa</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Empuk, Include Pompa</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 25rb</span>
                             <button onclick="sewaWA('Matras Angin', '25rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -316,13 +325,13 @@
                 </div>
             </div>
 
-             <div class="col-md-3 col-6 card-alat" data-kategori="tidur">
+            <div class="col-md-3 col-6 card-alat" data-kategori="tidur">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://img.lazcdn.com/g/p/b0a80db0973be436b67285f560e41af3.jpg_720x720q80.jpg" class="card-img-top" alt="Bantal">
-                    <div class="card-body p-3">
+                    <img src="https://img.lazcdn.com/g/p/b0a80db0973be436b67285f560e41af3.jpg_720x720q80.jpg" class="card-img-top" alt="Bantal" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Bantal Tiup</h6>
-                        <p class="small text-muted mb-1">Ringan, Praktis</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Ringan, Praktis</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 3rb</span>
                             <button onclick="sewaWA('Bantal Tiup', '3rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -332,11 +341,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="tidur">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcE05tzFjJdnVMB-ujFHlXdzV-oo4jIhJXlQ&s" class="card-img-top" alt="Hammock">
-                    <div class="card-body p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcE05tzFjJdnVMB-ujFHlXdzV-oo4jIhJXlQ&s" class="card-img-top" alt="Hammock" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Hammock Single</h6>
-                        <p class="small text-muted mb-1">Beban Max 150kg</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Beban Max 150kg</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 10rb</span>
                             <button onclick="sewaWA('Hammock', '10rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -346,11 +355,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="lampu">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://id-test-11.slatic.net/p/633880c849bead8d54257ac4a78df099.jpg" class="card-img-top" alt="Lampu Tenda">
-                    <div class="card-body p-3">
+                    <img src="https://id-test-11.slatic.net/p/633880c849bead8d54257ac4a78df099.jpg" class="card-img-top" alt="Lampu Tenda" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Lampu Tenda LED</h6>
-                        <p class="small text-muted mb-1">Terang, Baterai AAA</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Terang, Baterai AAA</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Lampu Tenda', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -360,11 +369,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="lampu">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYo7--CtJ0a5b-mos_ZLED-kI-JoFcBpXNJg&s" class="card-img-top" alt="Headlamp">
-                    <div class="card-body p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYo7--CtJ0a5b-mos_ZLED-kI-JoFcBpXNJg&s" class="card-img-top" alt="Headlamp" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Headlamp Waterproof</h6>
-                        <p class="small text-muted mb-1">Cahaya Fokus/Sebar</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Cahaya Fokus/Sebar</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 10rb</span>
                             <button onclick="sewaWA('Headlamp', '10rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -374,11 +383,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="lampu">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//89/MTA-37133701/brd-44261_senter-led-police-swat-taffware-c8-flashlight-waterproof-q5-3800-lumen_full01.jpg" class="card-img-top" alt="Senter">
-                    <div class="card-body p-3">
+                    <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//89/MTA-37133701/brd-44261_senter-led-police-swat-taffware-c8-flashlight-waterproof-q5-3800-lumen_full01.jpg" class="card-img-top" alt="Senter" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Senter Police Swat</h6>
-                        <p class="small text-muted mb-1">Jarak Jauh + Zoom</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Jarak Jauh + Zoom</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 8rb</span>
                             <button onclick="sewaWA('Senter Swat', '8rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -388,11 +397,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="lampu">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHrEo8iwAFEaohQDkxfX72wjHKOC2WB2AxWQ&s" class="card-img-top" alt="Powerbank">
-                    <div class="card-body p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHrEo8iwAFEaohQDkxfX72wjHKOC2WB2AxWQ&s" class="card-img-top" alt="Powerbank" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Powerbank 20.000mAh</h6>
-                        <p class="small text-muted mb-1">Fast Charging</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Fast Charging</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 20rb</span>
                             <button onclick="sewaWA('Powerbank', '20rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -402,11 +411,11 @@
 
             <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/4372a3bb-156e-4210-98bf-c419a32dfb33.jpg" class="card-img-top" alt="Trekking Pole">
-                    <div class="card-body p-3">
+                    <img src="https://d1yutv2xslo29o.cloudfront.net/product/variant/photo/4372a3bb-156e-4210-98bf-c419a32dfb33.jpg" class="card-img-top" alt="Trekking Pole" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Trekking Pole</h6>
-                        <p class="small text-muted mb-1">Antishock System</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Antishock System</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 10rb</span>
                             <button onclick="sewaWA('Trekking Pole', '10rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -414,13 +423,13 @@
                 </div>
             </div>
 
-             <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
+            <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://hikenrun.com/cdn/shop/files/ginee_20240724172214785_1290047509.png?v=1754876854" class="card-img-top" alt="Gaiter">
-                    <div class="card-body p-3">
+                    <img src="https://hikenrun.com/cdn/shop/files/ginee_20240724172214785_1290047509.png?v=1754876854" class="card-img-top" alt="Gaiter" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Gaiter (Pelindung Kaki)</h6>
-                        <p class="small text-muted mb-1">Anti Pacet/Kerikil</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Anti Pacet/Kerikil</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Gaiter', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -428,13 +437,13 @@
                 </div>
             </div>
 
-             <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
+            <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wOunnnhTdB6lQgfTf0zFonQ7PDaNjnVc3Q&s" class="card-img-top" alt="Sarung Tangan">
-                    <div class="card-body p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2wOunnnhTdB6lQgfTf0zFonQ7PDaNjnVc3Q&s" class="card-img-top" alt="Sarung Tangan" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Sarung Tangan Polar</h6>
-                        <p class="small text-muted mb-1">Hangat & Nyaman</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Hangat & Nyaman</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 5rb</span>
                             <button onclick="sewaWA('Sarung Tangan', '5rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -442,13 +451,13 @@
                 </div>
             </div>
 
-             <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
+            <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://id-test-11.slatic.net/p/c84479d0fc3292c1bfd765f695454f51.jpg" class="card-img-top" alt="Jas Hujan">
-                    <div class="card-body p-3">
+                    <img src="https://id-test-11.slatic.net/p/c84479d0fc3292c1bfd765f695454f51.jpg" class="card-img-top" alt="Jas Hujan" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Jas Hujan Poncho</h6>
-                        <p class="small text-muted mb-1">Bisa Jadi Flysheet</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Bisa Jadi Flysheet</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 10rb</span>
                             <button onclick="sewaWA('Jas Hujan', '10rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
@@ -456,13 +465,13 @@
                 </div>
             </div>
 
-             <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
+            <div class="col-md-3 col-6 card-alat" data-kategori="aksesoris">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="https://taffware.com/wp-content/uploads/2024/06/ginee_20240630012451160_8200672773-jpeg.webp" class="card-img-top" alt="Kursi">
-                    <div class="card-body p-3">
+                    <img src="https://taffware.com/wp-content/uploads/2024/06/ginee_20240630012451160_8200672773-jpeg.webp" class="card-img-top" alt="Kursi" style="height: 180px; object-fit: cover;">
+                    <div class="card-body p-3 d-flex flex-column">
                         <h6 class="fw-bold">Kursi Lipat Portable</h6>
-                        <p class="small text-muted mb-1">Santai di Camp</p>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <p class="small text-muted mb-3">Santai di Camp</p>
+                        <div class="d-flex justify-content-between align-items-center mt-auto">
                             <span class="text-warning fw-bold">Rp 15rb</span>
                             <button onclick="sewaWA('Kursi Lipat', '15rb')" class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-plus"></i></button>
                         </div>
