@@ -84,14 +84,17 @@ Dokumentasi tampilan website MyAdventure pada berbagai perangkat:
 
 ## 6. Bukti Aksesibilitas (Audit Lighthouse)
 
-Kami telah melakukan pengujian aksesibilitas menggunakan Google Lighthouse untuk memastikan website ramah bagi semua pengguna.
+Kami telah melakukan pengujian performa dan aksesibilitas menggunakan Google Lighthouse untuk memastikan kualitas website.
 
 | Kategori | Skor | Keterangan |
 | :--- | :--- | :--- |
-| **Accessibility** | **100** | Semua gambar memiliki `alt text`, kontras warna teks dan background sudah memenuhi standar, dan struktur HTML menggunakan tag semantik (`<main>`, `<nav>`). |
-| **Performance** | **95+** | Website ringan karena minim *library* eksternal yang berat. |
+| **Performance** | **100** | Website sangat ringan dan cepat karena kode yang efisien. |
+| **Accessibility** | **83** | Struktur HTML sudah menggunakan tag semantik dan atribut `alt` pada gambar. |
+| **Best Practices** | **100** | Kode mengikuti standar keamanan dan pengembangan web modern. |
+| **SEO** | **90** | Website mudah ditemukan dan diindeks oleh mesin pencari. |
 
 **Screenshot Hasil Audit:**
+
 ![Hasil Audit Lighthouse](img/lighthouse.png)
 
 ---
