@@ -13,6 +13,7 @@
 4. **Muhammad Jibran Ferdian** (4524210067)
 5. **Muhammad Farel Alberto** (4524210061)
 6. **Aufa Al Ghiyats Sulthan Priatmojo** (4524210132)
+
 ---
 
 ## 2. Arsitektur & Teknologi (Tech Stack)
@@ -21,7 +22,7 @@ Kami menggunakan standar industri pengembangan web modern dengan rincian sebagai
 
 | Teknologi | Implementasi Spesifik |
 | :--- | :--- |
-| **HTML5** | Struktur semantik dokumen web. Penggunaan tag `<video>` untuk *Hero Background* dan struktur navigasi yang SEO-friendly. |
+| **HTML5** | Struktur semantik dokumen web (`<nav>`, `<main>`, `<footer>`). Penggunaan tag `<video>` untuk *Hero Background* dan atribut `alt` untuk aksesibilitas gambar. |
 | **CSS3 (Custom)** | Kustomisasi tampilan meliputi animasi `@keyframes fadeIn`, efek *hover zoom* pada kartu produk, dan penyesuaian warna tema (Kuning/Hitam). |
 | **Bootstrap 5.3** | Framework CSS utama. Digunakan untuk *Grid System* (Responsive Layout), *Navbar*, *Button Groups*, dan *Dropdown Menu*. |
 | **JavaScript (ES6)** | Logika utama website. Menangani **DOM Manipulation** untuk fitur filter kategori dinamis, logika tombol "Active", dan pembuatan pesan otomatis ke API WhatsApp. |
@@ -76,8 +77,22 @@ Dokumentasi tampilan website MyAdventure pada berbagai perangkat:
 
 | Tampilan Desktop | Tampilan Tablet | Tampilan Mobile |
 | :---: | :---: | :---: |
-| ![Desktop View](docs/desktop.png) | ![Tablet View](docs/tablet.png) | ![Mobile View](docs/hp.png) |
-*(Fitur filter "Lainnya" aktif dan responsif menyesuaikan lebar layar)*
+| ![Desktop View](img/desktop.png) | ![Tablet View](img/tablet.png) | ![Mobile View](img/hp.png) |
+*(Gambar tersimpan di folder `docs/img/`)*
+
+---
+
+## 6. Bukti Aksesibilitas (Audit Lighthouse)
+
+Kami telah melakukan pengujian aksesibilitas menggunakan Google Lighthouse untuk memastikan website ramah bagi semua pengguna.
+
+| Kategori | Skor | Keterangan |
+| :--- | :--- | :--- |
+| **Accessibility** | **100** | Semua gambar memiliki `alt text`, kontras warna teks dan background sudah memenuhi standar, dan struktur HTML menggunakan tag semantik (`<main>`, `<nav>`). |
+| **Performance** | **95+** | Website ringan karena minim *library* eksternal yang berat. |
+
+**Screenshot Hasil Audit:**
+![Hasil Audit Lighthouse](img/lighthouse.png)
 
 ---
 
